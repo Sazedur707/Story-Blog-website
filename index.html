@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/resposinve.css">
+    <title>Md. Sazedur Rahman</title>
+</head>
+
+<body>
+    <div class="top-wrapper">
+        <div class="nav-wrapper">
+            <a class="blueHover" href="index.html"><img src="assets/img/home.png" alt="Home"><span> Home</span></a>
+            <a class="blueHover" href="#1"><img src="assets/img/info.png" alt=""><span> About</span></a>
+            <a class="blueHover" href="#2"><img src="assets/img/house-laptop.png" alt=""><span> What I do</span></a>
+            <a class="blueHover" href="#3"><img src="assets/img/list-timeline.png" alt=""><span> Works</span></a>
+            <a class="blueHover" href="#4"><img src="assets/img/address-book.png" alt=""><span> Contact</span></a>
+        </div>
+        <div class="logo-wrapper">
+            <h1>Md. Sazedur Rahman</h1>
+        </div>
+    </div>
+
+    <div class="landing-wrapper">
+        <div class="landingOne">
+            <h1>Hello! I am Sazedur!!</h1>
+        </div>
+        <div class="landingTwo animation">
+            <p>I am a <span id="typing-text"></span></p>
+            <script>
+                const sentences = ["Student.", "Web Developer."];
+                const typingText = document.getElementById("typing-text");
+                let sentenceIndex = 0;
+                let charIndex = 0;
+
+                function type() {
+                    const sentence = sentences[sentenceIndex];
+
+                    if (charIndex < sentence.length) {
+                        typingText.textContent += sentence.charAt(charIndex);
+                        charIndex++;
+                    } else {
+                        sentenceIndex++;
+                        charIndex = 0;
+                        if (sentenceIndex === sentences.length) {
+                            sentenceIndex = 0;
+                        }
+                        typingText.textContent = "";
+                    }
+
+                    setTimeout(type, 300); // Adjust the typing speed here (in milliseconds)
+                }
+
+                type();
+
+            </script>
+        </div>
+        <div class="landingThree">
+            <a href=""><button>Order</button></a>
+            <a href=""><button>Download CV</button></a>
+        </div>
+    </div>
+
+
+    <div class="about-wrapper" id="1">
+        <div class="about-top">
+            <div class="about-top-box title-box">
+                <h1>About</h1>
+            </div>
+        </div>
+        <div class="about-bottom">
+            <div class="about-left">
+                <div class="about-bottom-left-top">
+                    <h2>Biography</h2>
+                </div>
+                <div class="about-bottom-left-bottom">
+                    <b>Name: </b><br> Md. Sazedur Rahman <br><br>
+                    <b>Date of Birth: </b><br> 7 January, 2008 <br><br>
+                    <b>Birthplace: </b><br> Chapainawabganj, Rajshahi (Bangladesh) <br><br>
+                    <b>Occupation: </b><br> Student <br><br>
+                    <b>High School: </b><br> Harimohan Government High School, Chapainawabganj <br><br>
+                    <b>SSC batch: </b><br> 2023 <br><br>
+                </div>
+            </div>
+            <div class="about-right">
+                <div class="about-bottom-right-top">
+                    <h2>Others</h2>
+                </div>
+                <div class="about-bottom-right-bottom">
+                    <p style="width: fit-content;">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum quo vero maxime accusantium
+                        itaque officiis consectetur debitis recusandae temporibus perferendis?
+                    </p>
+                    <p>
+                        <a href=""><button class="basic-button">Writings</button></a>
+                        <a href=""><button class="basic-button">Posts</button></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="whatIdo-wrapper wrappers" id="2">
+        <div class="whatIdo-top title-box">
+            <h1>What I do</h1>
+        </div>
+        <div class="whatIdo-bottom">
+            <div class="whatIdo-box">
+                <h2>Step One</h2>
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, praesentium?</p>
+            </div>
+            <div class="whatIdo-box">
+                <h2>Step Two</h2>
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, praesentium?</p>
+            </div>
+            <div class="whatIdo-box">
+                <h2>Step Three</h2>
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, praesentium?</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="works-wrapper wrappers" id="3">
+        <div class="works-top title-box">
+            <h1>Works</h1>
+        </div>
+        <div class="works-bottom">
+            <div class="works-box">
+                <img src="assets/img/works_1.png" alt="">
+                <div class="works-box-content stdPd">
+                    <h2>Dairai: Online Diary Posting</h2>
+                    <p>Features: (a)Entry Posting system, (b)Live Chat system.</p>
+                    <a href="http://dairai.000webhostapp.com/"><button class="basic-button">Visit Now</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-wrapper wrappers">
+        <div class="contact-top title-box">
+            <h1>Contact</h1>
+        </div>
+        <div class="contact-bottom">
+            <div class="contact-bottom-left">
+                <div class="contact-bottom-left-top">
+                    <h2>Send a message</h2>
+                </div>
+                <div class="contact-bottom-left-bottom">
+                    <form action="submit.php" method="post">
+                        <label for="name" style="display: block;">Name:</label>
+                        <input type="text" id="name" name="name" required
+                            style="width: 300px; padding: 10px; margin-bottom: 10px;"><br>
+
+                        <label for="email" style="display: block;">Email:</label>
+                        <input type="email" id="email" name="email" required
+                            style="width: 300px; padding: 10px; margin-bottom: 10px;"><br>
+
+                        <label for="message" style="display: block;">Message:</label>
+                        <textarea id="message" name="message" required
+                            style="width: 300px; height: 130px; padding: 10px; margin-bottom: 10px;"></textarea><br>
+
+                        <input type="submit" value="Submit" class="basic-button">
+                    </form>
+                </div>
+            </div>
+            <div class="contact-bottom-right">
+                <h2>Socials/Addresses</h2>
+                <p>
+                    <a href="https://www.facebook.com/Szdr79/"><img src="assets/img/facebook.png" alt=""></a>
+                    <a href=""><img src="assets/img/github.png" alt=""></a>
+                    <a href=""></a>
+                    <a href=""></a>
+                </p>
+                <p>
+                <h3>Location:</h3>
+                Alinagar, Chapainawabganj <br>
+                <h3>Email:</h3>
+                sazedurrahman707@gmail.com <br>
+                <h3>Phone:</h3>
+                +88018580809301 <br>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer style="background-color: darkblue; color: white; padding: 20px; text-align: center; margin-top: 40px;">
+        <p style="margin: 0;">&copy; 2023 <a href="https://www.facebook.com/Szdr79/" class="white whiteHover">Md. Sazedur Rahman</a>. All rights reserved.</p>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    <button id="goTopButton">Go Top</button>
+    <script>
+        document.getElementById("goTopButton").addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>
